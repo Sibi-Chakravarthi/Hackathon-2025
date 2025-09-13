@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food Database - Ayurvedic Diet Management</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Food Database</h1>
+  <button class="back-home-btn" id="back-home-btn">&#8592; Back to Home</button>
+  </header>
+  <main>
+    <section>
+      <h2>Food Items</h2>
+      <table>
+        <thead>
+          <tr><th>Food Item</th><th>Calories</th><th>Rasa (Taste)</th><th>Properties</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Turmeric</td><td>29 kcal/100g</td><td>Bitter</td><td>Hot, Easy to digest</td></tr>
+          <tr><td>Rice</td><td>130 kcal/100g</td><td>Sweet</td><td>Cold, Easy to digest</td></tr>
+          <tr><td>Ghee</td><td>900 kcal/100g</td><td>Sweet</td><td>Hot, Heavy to digest</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+<script>
+  document.getElementById('back-home-btn').addEventListener('click', function() {
+    window.location.replace('index.html#home');
+  });
+</script>
+</html>

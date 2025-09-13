@@ -120,6 +120,25 @@ button:hover {
   box-shadow: 0 0 12px rgba(30,132,73,0.7);
 }
 
+.back-home-btn {
+  background: #fff;
+  color: #27ae60;
+  border: 2px solid #27ae60;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(39,174,96,0.12);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+.back-home-btn:hover {
+  background: #27ae60;
+  color: #fff;
+  border-color: #1e8449;
+}
+
 #diet-result {
   margin-top: 25px;
   background: #dff0d8;

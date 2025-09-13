@@ -21,69 +21,20 @@
   <div id="app-page" class="page">
     <header>
       <h1>Ayurvedic Diet Management</h1>
-      <nav>
-        <button data-section="dashboard" class="nav-btn active">Dashboard</button>
-        <button data-section="patients" class="nav-btn">Patients</button>
-        <button data-section="fooddb" class="nav-btn">Food Database</button>
-        <button data-section="dietchart" class="nav-btn">Diet Chart</button>
-        <button data-section="workflow" class="nav-btn">Workflow</button>
-        <button id="logout-btn">Logout</button>
-      </nav>
+      <button id="logout-btn">Logout</button>
     </header>
-
     <main>
-      <section id="dashboard" class="section active">
-        <h2>Dashboard Overview</h2>
-        <p>Welcome to the Ayurvedic Diet Management prototype. Key features include patient management, food database, diet chart generation, and Ayurvedic nutritional tracking.</p>
+      <section id="doctor-info" class="section active">
+        <h2>Dr.Stone</h2>
+        <p>Ayurvedic Nutrition Specialist<br>
+        Experience: 3,700 years<br>
+        Clinic: Currently Homeless</p>
       </section>
-
-      <section id="patients" class="section">
-        <h2>Patient Management</h2>
-        <table>
-          <thead>
-            <tr><th>Name</th><th>Age</th><th>Gender</th><th>Dietary Habits</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Ravi Kumar</td><td>35</td><td>Male</td><td>Vegetarian</td></tr>
-            <tr><td>Sita Sharma</td><td>28</td><td>Female</td><td>Vegan</td></tr>
-            <tr><td>Arjun Singh</td><td>42</td><td>Male</td><td>Non-Vegetarian</td></tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section id="fooddb" class="section">
-        <h2>Food Database</h2>
-        <table>
-          <thead>
-            <tr><th>Food Item</th><th>Calories</th><th>Rasa (Taste)</th><th>Properties</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Turmeric</td><td>29 kcal/100g</td><td>Bitter</td><td>Hot, Easy to digest</td></tr>
-            <tr><td>Rice</td><td>130 kcal/100g</td><td>Sweet</td><td>Cold, Easy to digest</td></tr>
-            <tr><td>Ghee</td><td>900 kcal/100g</td><td>Sweet</td><td>Hot, Heavy to digest</td></tr>
-          </tbody>
-        </table>
-      </section>
-
-      <section id="dietchart" class="section">
-        <h2>Diet Chart Generation</h2>
-        <form id="diet-form">
-          <label for="patient-select">Select Patient:</label>
-          <select id="patient-select">
-            <option value="Ravi Kumar">Ravi Kumar</option>
-            <option value="Sita Sharma">Sita Sharma</option>
-            <option value="Arjun Singh">Arjun Singh</option>
-          </select>
-          <button type="button" id="generate-diet">Generate Diet Chart</button>
-        </form>
-        <div id="diet-result"></div>
-      </section>
-
-      <section id="workflow" class="section">
-        <h2>Workflow Diagram</h2>
-        <img src="workflow-diagram.png" alt="Workflow Diagram" style="max-width:100%;height:auto;" />
-        <p>This diagram represents the system architecture and workflow for the Ayurvedic Diet Management Software.</p>
-      </section>
+      <div id="menu" class="section active">
+        <button class="menu-btn" data-section="patients">Patients</button>
+        <button class="menu-btn" data-section="fooddb">Food Database</button>
+        <button class="menu-btn" data-section="dietchart">Diet Chart</button>
+      </div>
     </main>
   </div>
 

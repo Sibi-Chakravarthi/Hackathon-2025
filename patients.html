@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patients - Ayurvedic Diet Management</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Patients</h1>
+  <button class="back-home-btn" id="back-home-btn">&#8592; Back to Home</button>
+  </header>
+  <main>
+    <section>
+      <h2>Patient List</h2>
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Age</th><th>Gender</th><th>Dietary Habits</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Ravi Kumar</td><td>35</td><td>Male</td><td>Vegetarian</td></tr>
+          <tr><td>Sita Sharma</td><td>28</td><td>Female</td><td>Vegan</td></tr>
+          <tr><td>Arjun Singh</td><td>42</td><td>Male</td><td>Non-Vegetarian</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+<script>
+  document.getElementById('back-home-btn').addEventListener('click', function() {
+    window.location.replace('index.html#home');
+  });
+</script>
+</html>

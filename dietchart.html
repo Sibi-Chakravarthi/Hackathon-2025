@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diet Chart - Ayurvedic Diet Management</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Diet Chart</h1>
+  <button class="back-home-btn" id="back-home-btn">&#8592; Back to Home</button>
+  </header>
+  <main>
+    <section>
+      <h2>Diet Chart Generator</h2>
+      <form id="diet-form">
+        <label for="patient-select">Select Patient:</label>
+        <select id="patient-select">
+          <option value="Ravi Kumar">Ravi Kumar</option>
+          <option value="Sita Sharma">Sita Sharma</option>
+          <option value="Arjun Singh">Arjun Singh</option>
+        </select>
+        <button type="button" id="generate-diet">Generate Diet Chart</button>
+      </form>
+      <div id="diet-result"></div>
+    </section>
+  </main>
+  <script>
+    document.getElementById('generate-diet').addEventListener('click', function() {
+      var patient = document.getElementById('patient-select').value;
+      var result = `<h3>Diet Chart for ${patient}</h3><ul><li>Breakfast: Warm rice porridge with turmeric</li><li>Lunch: Steamed vegetables with ghee and chapati</li><li>Snack: Herbal tea</li><li>Dinner: Khichdi with mild spices</li></ul><p><em>All meals are balanced according to Ayurvedic principles.</em></p>`;
+      document.getElementById('diet-result').innerHTML = result;
+    });
+  </script>
+</body>
+<script>
+  document.getElementById('back-home-btn').addEventListener('click', function() {
+    window.location.replace('index.html#home');
+  });
+</script>
+</html>
