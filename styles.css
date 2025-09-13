@@ -1,0 +1,136 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #f0f4f8;
+  color: #2c3e50;
+  transition: background-color 0.3s ease;
+}
+
+.page {
+  display: none;
+  padding: 20px;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.page.active {
+  display: block;
+}
+
+header {
+  background: #27ae60;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav button {
+  background: transparent;
+  border: none;
+  color: white;
+  margin-left: 12px;
+  font-size: 1.1em;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover, nav button.active {
+  background: #1e8449;
+  box-shadow: 0 0 8px rgba(30,132,73,0.6);
+}
+
+h1, h2 {
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table, th, td {
+  border: none;
+}
+
+th {
+  background: #27ae60;
+  color: white;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  background: white;
+  padding: 12px 15px;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+td:last-child {
+  border-bottom: none;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 7px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+input[type="text"], input[type="password"], select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1.5px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, select:focus {
+  border-color: #27ae60;
+  outline: none;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 1.1em;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e8449;
+  box-shadow: 0 0 12px rgba(30,132,73,0.7);
+}
+
+#diet-result {
+  margin-top: 25px;
+  background: #dff0d8;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #27ae60;
+  font-size: 1.05em;
+  box-shadow: 0 2px 6px rgba(39,174,96,0.3);
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
