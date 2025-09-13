@@ -14,7 +14,18 @@
   <main>
     <section>
       <h2>Food Items</h2>
-      <table>
+      <form id="add-food-form" style="margin-bottom: 24px;">
+        <label for="food-name">Food Item:</label>
+        <input type="text" id="food-name" required />
+        <label for="food-calories">Calories:</label>
+        <input type="text" id="food-calories" required />
+        <label for="food-rasa">Rasa (Taste):</label>
+        <input type="text" id="food-rasa" required />
+        <label for="food-properties">Properties:</label>
+        <input type="text" id="food-properties" required />
+        <button type="submit">Add Food</button>
+      </form>
+      <table id="food-table">
         <thead>
           <tr><th>Food Item</th><th>Calories</th><th>Rasa (Taste)</th><th>Properties</th></tr>
         </thead>
@@ -30,6 +41,22 @@
 <script>
   document.getElementById('back-home-btn').addEventListener('click', function() {
     window.location.replace('index.html#home');
+  });
+
+  // Add food item logic
+  document.getElementById('add-food-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('food-name').value.trim();
+    const calories = document.getElementById('food-calories').value.trim();
+    const rasa = document.getElementById('food-rasa').value.trim();
+    const properties = document.getElementById('food-properties').value.trim();
+    if (name && calories && rasa && properties) {
+      const table = document.getElementById('food-table').getElementsByTagName('tbody')[0];
+      const row = document.createElement('tr');
+      row.innerHTML = `<td>${name}</td><td>${calories}</td><td>${rasa}</td><td>${properties}</td>`;
+      table.appendChild(row);
+      document.getElementById('add-food-form').reset();
+    }
   });
 </script>
 </html>

@@ -21,16 +21,35 @@
           <option value="Sita Sharma">Sita Sharma</option>
           <option value="Arjun Singh">Arjun Singh</option>
         </select>
-        <button type="button" id="generate-diet">Generate Diet Chart</button>
+        <label for="breakfast">Breakfast:</label>
+        <input type="text" id="breakfast" placeholder="e.g. Rice porridge with turmeric" required />
+        <label for="lunch">Lunch:</label>
+        <input type="text" id="lunch" placeholder="e.g. Steamed vegetables with ghee" required />
+        <label for="snack">Snack:</label>
+        <input type="text" id="snack" placeholder="e.g. Herbal tea" required />
+        <label for="dinner">Dinner:</label>
+        <input type="text" id="dinner" placeholder="e.g. Khichdi with mild spices" required />
+        <button type="submit" id="generate-diet">Create Diet Chart</button>
       </form>
       <div id="diet-result"></div>
     </section>
   </main>
   <script>
-    document.getElementById('generate-diet').addEventListener('click', function() {
+    document.getElementById('diet-form').addEventListener('submit', function(e) {
+      e.preventDefault();
       var patient = document.getElementById('patient-select').value;
-      var result = `<h3>Diet Chart for ${patient}</h3><ul><li>Breakfast: Warm rice porridge with turmeric</li><li>Lunch: Steamed vegetables with ghee and chapati</li><li>Snack: Herbal tea</li><li>Dinner: Khichdi with mild spices</li></ul><p><em>All meals are balanced according to Ayurvedic principles.</em></p>`;
+      var breakfast = document.getElementById('breakfast').value.trim();
+      var lunch = document.getElementById('lunch').value.trim();
+      var snack = document.getElementById('snack').value.trim();
+      var dinner = document.getElementById('dinner').value.trim();
+      var result = `<h3>Diet Chart for ${patient}</h3><ul>`;
+      if (breakfast) result += `<li>Breakfast: ${breakfast}</li>`;
+      if (lunch) result += `<li>Lunch: ${lunch}</li>`;
+      if (snack) result += `<li>Snack: ${snack}</li>`;
+      if (dinner) result += `<li>Dinner: ${dinner}</li>`;
+      result += `</ul><p><em>All meals are balanced according to Ayurvedic principles.</em></p>`;
       document.getElementById('diet-result').innerHTML = result;
+      document.getElementById('diet-form').reset();
     });
   </script>
 </body>
